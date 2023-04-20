@@ -85,7 +85,7 @@ exports.createBlog = (req, res) => {
       createdAt:  req.body.createdAt,
       tag:  req.body.tag,
       userId:   req.body.userId,
-     
+      review:req.body.review
     })
     .then(data => {
       res.status(201).json({
