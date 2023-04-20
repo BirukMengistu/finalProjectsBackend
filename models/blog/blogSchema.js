@@ -7,8 +7,8 @@ const blogSchema = mongoose.Schema({
   body: String,
   createdAt:Date,
   tag:[],
-  userId:String
-
+  userId:String,
+  review:Boolean
 }, { timestamps: true })
 
 
