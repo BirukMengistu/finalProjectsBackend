@@ -38,7 +38,9 @@ app.use(bodyParser.urlencoded({
   extended: false
 }))
 app.use(bodyParser.json())
-
+app.use(cors({
+  origin: '*'
+}))
 const userController = require('./controllers/userController');
 const resumeController = require('./controllers/resumeController');
 const profileController = require('./controllers/profileController');
@@ -65,5 +67,6 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`server is up and running on port ${port}`)
 })
+
 
 

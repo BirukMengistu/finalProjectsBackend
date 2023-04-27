@@ -46,7 +46,7 @@ exports.registerUser = (req, res) => {
         passwordHash:   hash
       })
       .then(user => {
-        res.status(201).json({
+         res.status(201).json({
           statusCode: 201,
           status: true,
           message: 'User was created successfully',
@@ -112,6 +112,8 @@ exports.loginUserWithEmailAndPassword = (req, res) => {
       res.status(200).json({
         statusCode: 200,
         status: true,
+        expiresIn:'1hr',
+        user:user,
         message: 'Authentication was successful',
         token: auth.generateToken(user)
       })
