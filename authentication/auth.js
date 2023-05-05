@@ -8,11 +8,13 @@ exports.generateToken = (user) => {
 }
 
 exports.verifyToken = (req, res, next) => {
-
+ 
   // Bearer <token>
   // Token blir skickad som Bearer <token> därför gör vi en split för att bara få token delen
   try {
+    console.log(req)
     const token = req.headers.authorization.split(" ")[1];
+    
     req.userData = jwt.verify(token, secretKey);
     next();
   } 

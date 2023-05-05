@@ -1,6 +1,6 @@
 const { exists } = require('./blogSchema');
 const Blog = require('./blogSchema');
-
+const User = require('../users/userSchema')
 exports.getBlogs = async (req, res) => {
 
   try {
@@ -56,8 +56,8 @@ exports.getBlogById = (req, res) => {
 
 exports.createBlog = (req, res) => {
 
-  Blog.exists({ userId: req.body.userId }, (err, result) => {
-
+  Blog.exists({ _id: req.body._Id }, (err, result) => {
+  
     if(err) {
       return res.status(500).json(err)
     }

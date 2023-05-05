@@ -49,9 +49,13 @@ exports.registerUser = (req, res) => {
          res.status(201).json({
           statusCode: 201,
           status: true,
+          expiresIn:'1hr',
+          user:user,
           message: 'User was created successfully',
           token: auth.generateToken(user)
         })
+
+       
       })
       .catch(err => {
         res.status(500).json({

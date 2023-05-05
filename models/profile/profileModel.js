@@ -78,6 +78,9 @@ exports.createProfile = (req, res) => {
    
     Profile.create({
       userId:   req.body.userId,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      image:req.body.image,
       gender:  req.body.gender,
       email:  req.body.email,
       address:   req.body.address,

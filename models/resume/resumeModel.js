@@ -70,22 +70,18 @@ exports.createResume = (req, res) => {
       })
     }
 
-   
+
    
     // const newResume = new Resume({})
     // newResume.save()
 
     Resume.create({
-      education:   req.body.education,
-      personalInformation:  req.body.personalInformation,
-      workExpriance:  req.body.workExpriance,
+     
       technical_Skil:  req.body.technical_Skil,
       summary:   req.body.summary,
-      refefrence:  req.body.refefrence,
       language:  req.body.language,
-      projects:  req.body.projects,
       userId:  req.body.userId,
-      image:  req.body.image
+      hobby:  req.body.hobby
     })
     .then(data => {
       res.status(201).json({

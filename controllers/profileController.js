@@ -2,20 +2,20 @@ const router = require('express').Router();
 const profileModel = require('../models/profile/profileModel');
 const auth = require('../authentication/auth');
 
-// Get all products
+// Get all profiles
 router.get('/', profileModel.getProfiles);
 
-//Get one product by id
+//Get one profile by id
 router.get('/:id', profileModel.getProfileById);
 
-//create new product
+//create new profile
 router.post('/', auth.verifyToken, profileModel.createProfile);
 
-// Update product
+// Update profile
 router.patch('/:id', auth.verifyToken, profileModel.updateProfile);
 router.put('/:id', auth.verifyToken, profileModel.updateProfile);
 
-//Delete product
+//Delete profile
 router.delete('/:id', auth.verifyToken, profileModel.updateProfile);
 
 
