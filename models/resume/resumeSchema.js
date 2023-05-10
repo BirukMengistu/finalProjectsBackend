@@ -9,7 +9,10 @@ const resumeSchema = mongoose.Schema({
   hobby:     { type: [], required: false },
   language:     { type: [], required: true },
   userId:    { type: String, required: true },
-  
+  github :{type:String ,require:false},
+  linkden :{type:String ,require:false},
+  youtube :{type:String ,require:false},
+  profileImg :{type:String ,require:false},
 
 }, { timestamps: true })
 

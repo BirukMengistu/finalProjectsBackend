@@ -23,6 +23,8 @@ const blogController = require('./controllers/blogController');
 const educationController = require('./controllers/educationController');
 const referenceController = require('./controllers/referenceController');
 const projectController = require('./controllers/projectController');
+const jobExperianceController = require('./controllers/JobExperianceController');
+
 // MIDDLEWARE
 // CONTROLLERS
 
@@ -33,7 +35,7 @@ app.use('/api/blog', blogController);
 app.use('/api/education', educationController);
 app.use('/api/reference', referenceController);
 app.use('/api/project', projectController);
-
+app.use('/api/jobexperiance', jobExperianceController);
 
 // Connect to MongoDB
 

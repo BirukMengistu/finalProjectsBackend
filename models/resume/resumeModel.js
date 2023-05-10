@@ -81,7 +81,11 @@ exports.createResume = (req, res) => {
       summary:   req.body.summary,
       language:  req.body.language,
       userId:  req.body.userId,
-      hobby:  req.body.hobby
+      hobby:  req.body.hobby,
+      github :req.body.github,
+      linkden :req.body.linkden,
+      youtube:req.body.youtube,
+      profileImg :req.body.profileImg
     })
     .then(data => {
       res.status(201).json({
