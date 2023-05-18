@@ -8,7 +8,8 @@ const blogSchema = mongoose.Schema({
   createdAt:Date,
   tag:[],
   userId:String,
-  review:Boolean
+  review:Boolean,
+  blogImage:String
 }, { timestamps: true })
 
 

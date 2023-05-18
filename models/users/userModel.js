@@ -42,6 +42,7 @@ exports.registerUser = (req, res) => {
       User.create({
         firstName:      req.body.firstName,
         lastName:       req.body.lastName,
+        roles:          req.body.roles,
         email:          req.body.email,
         passwordHash:   hash
       })
